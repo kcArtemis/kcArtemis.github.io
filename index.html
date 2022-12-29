@@ -1,47 +1,28 @@
-<!DOCTYPE html>
-<html>
 <head>
-	<title>My Portfolio</title>
+  <style> body { margin: 0; } </style>
+
+  <script src="//unpkg.com/3d-force-graph"></script>
+  <!--<script src="../../dist/3d-force-graph.js"></script>-->
 </head>
+
 <body>
+  <div id="3d-graph"></div>
 
-	<h1>Deep Patel</h1>
+  <script>
+    // Random tree
+    const N = 300;
+    const gData = {
+      nodes: [...Array(N).keys()].map(i => ({ id: i })),
+      links: [...Array(N).keys()]
+        .filter(id => id)
+        .map(id => ({
+          source: id,
+          target: Math.round(Math.random() * (id-1))
+        }))
+    };
 
-	<p> My name is Deep Patel and is currently persuing bTech in Computor Science Engineernig in Indian Institute of Technology Jodhpur </p>
-
-	<h2>My resume</h2>
-
-	<div>
-		<h3>The Language which I know</h3>
-		<ul>
-			<li>C</li>
-			<li>Python</li>
-			<li>Matlab</li>
-			<li><a class="In Progress">Java</a></li>
-			<li><a class="In progress">C++</a></li>
-		</ul>
-	
-	</div>
-	<h2>The Courses which I persuaded for computative developement</h2>
-	<p id="Courses">I have completed my basic introduction to python,data structure and algorith (in C language) and currently my course is going on Pattern recognization and machine learning </p>
-
-	<p id="games">I also love to play Valorant by riot games</p>
-
-	<p>Some of the project that I have been </p>
-	<div id="skills">
-	<ul>
-		<li>Have done denoising and deblurring of the noisy signal</li>
-		<li><a class="currently going on">Alu genome project</a></li>
-	</ul>	
-	</div>
-
-	<h3>Favorite Series</h3>
-	<p>List of my favourite and watched series are</p>
-	<ul>
-		<li alt="Netflix">The Vampire Diaries</li>
-		<li alt="Netflix"><a class="Going on">The beloved summer</a></li>
-	</ul>	
-
-
+    const Graph = ForceGraph3D()
+      (document.getElementById('3d-graph'))
+        .graphData(gData);
+  </script>
 </body>
-</html>
