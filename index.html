@@ -44,6 +44,11 @@
         .graphData(gData)
         .linkDirectionalArrowLength(3.5)
         .linkDirectionalArrowRelPos(1)
-        .linkCurvature(0.25);
+        .linkCurvature(0.25)
+        .onNodeDragEnd(node => {
+              node.fx = node.fx;
+              node.fy = node.fy;
+              node.fz = node.fz;
+        });
   </script>
 </body>
