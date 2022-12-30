@@ -21,6 +21,9 @@
           fx: 1,
           fy: 1,
           fz: 1,
+          Posx: 1,
+          Posy: 1,
+          Posz: 1;
         },
         {
           id: "id2",
@@ -29,6 +32,9 @@
           fx: 0,
           fy: 0,
           fz: 0,
+          Posx: 0,
+          Posy: 0,
+          Posz: 0;
         },
     ],
     links: [
@@ -46,9 +52,9 @@
         .linkDirectionalArrowRelPos(1)
         .linkCurvature(0.25)
         .onNodeDragEnd(node => {
-            node.fx = node.x;
-            node.fy = node.y;
-            node.fz = node.z;
+            node.fx = node.fx;
+            node.fy = node.fy;
+            node.fz = node.fz;
         });
   </script>
 </body>
