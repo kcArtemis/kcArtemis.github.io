@@ -18,9 +18,9 @@
           id: "id1",
           name: "name1",
           val: 1,
-          fx: 0,
-          fy: 0,
-          fz: 0,
+          fx: 1,
+          fy: 1,
+          fz: 1,
         },
         {
           id: "id2",
@@ -46,6 +46,9 @@
         .d3Force('collide', d3.forceCollide(Radius))  
         .d3Force('x', d3.forceX(0).strength(0.1))
         .d3Force('y', d3.forceY(0).strength(0.1))
-        .d3Force('z', d3.forceZ(0).strength(0.1));
+        .d3Force('z', d3.forceZ(0).strength(0.1))
+        .linkDirectionalArrowLength(3.5)
+        .linkDirectionalArrowRelPos(1)
+        .linkCurvature(0.25);
   </script>
 </body>
