@@ -42,6 +42,10 @@
     const Graph = ForceGraph3D()
       (document.getElementById('3d-graph'))
         .graphData(gData)
-        .d3Force('charge', null);
+        .d3Force('charge', null)
+        .d3Force('collide', d3.forceCollide(Radius))  
+        .d3Force('x', d3.forceX(0).strength(0.1))
+        .d3Force('y', d3.forceY(0).strength(0.1))
+        .d3Force('z', d3.forceZ(0).strength(0.1));
   </script>
 </body>
