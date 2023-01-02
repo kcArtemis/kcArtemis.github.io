@@ -46,9 +46,9 @@
         .linkDirectionalArrowRelPos(1)
         .linkCurvature(0.25)
         .onNodeDragEnd(node => {
-              node.fx = 1;
-              node.fy = 1;
-              node.fz = 1;
+              node.fx = node.x;
+              node.fy = node.y;
+              node.fz = node.z;
         });
   </script>
 </body>
