@@ -49,6 +49,13 @@
               node.fx = node.x;
               node.fy = node.y;
               node.fz = node.z;
-        });
+        })
+        .onNodeClick(node => {
+            if (node.id == "id1") {
+                node.fx = 10; // toggle collapse state
+                node.fy = 10;
+                node.fz = 10;
+        }
+         });
   </script>
 </body>
