@@ -92,11 +92,13 @@ body {
     
     function openNav() {
       document.getElementById("mySidepanel").style.width = "250px";
+      document.getElementById("mySidepanel").style.display = "block";
     }
 
     /* Set the width of the sidebar to 0 (hide it) */
     function closeNav() {
       document.getElementById("mySidepanel").style.width = "0";
+      document.getElementById("mySidepanel").style.display = "none";
     }
     
     const N = 3;
@@ -144,6 +146,9 @@ body {
       
     ]
     };
+
+    // don't display the sidepanel
+
 
     const Graph = ForceGraph3D()
       (document.getElementById('3d-graph'))
