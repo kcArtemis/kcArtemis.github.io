@@ -19,11 +19,11 @@ body {
 
 .sidebar {
   height: 100%;
-  width: 0;
+  width: 20;
   position: fixed;
   z-index: 1;
-  top: 0;
-  left: 0;
+  top: 20;
+  left: 20;
   background-color: #111;
   overflow-x: hidden;
   transition: 0.5s;
@@ -164,17 +164,17 @@ body {
         })
         .onNodeClick(node => {
             if (node.id == "id1") {
-                node.fx = 10; // toggle collapse state
-                node.fy = 10;
-                node.fz = 10;
+//                 node.fx = 10; // toggle collapse state
+//                 node.fy = 10;
+//                 node.fz = 10;
 //                 #location.href = "https://academic.oup.com/mbe/article/24/11/2385/1014692";
                 openNav();
                 
         }
            if (node.id == "id2") {
-                node.fx = 50; // toggle collapse state
-                node.fy = 50;
-                node.fz = 50;
+//                 node.fx = 50; // toggle collapse state
+//                 node.fy = 50;
+//                 node.fz = 50;
 //                 location.href = "https://github.com/kcArtemis/IISC-Project/blob/main/script.js";
                 openNav();
         }
