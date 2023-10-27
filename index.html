@@ -1,183 +1,326 @@
-<!-- <head>
-  <style> body { margin: 0; } </style>
-
-  <script src="//unpkg.com/3d-force-graph"></script>
-  <!--<script src="../../dist/3d-force-graph.js"></script>-->
-<!--   <link rel="stylesheet" type="text/css" href="style.css" media=”scrstyle -->
-<!-- </head> --> -->
 <!DOCTYPE HTML>
-<head>
-<style> body { margin: 0; } </style>
+<!--
+	Helios by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Helios by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
 
-<script src="//unpkg.com/3d-force-graph"></script>
-  <!--<script src="../../dist/3d-force-graph.js"></script>-->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  font-family: "Lato", sans-serif;
-}
+			<!-- Header -->
+				<div id="header">
 
-.sidebar {
-  height: 100%;
-  width: 20;
-  position: fixed;
-  z-index: 1;
-  top: 20;
-  left: 20;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
+					<!-- Inner -->
+						<div class="inner">
+							<header>
+								<h1><a href="index.html" id="logo">||Hey! Deep here||</a></h1>
+								<hr />
+								<p>If you know you are on the right track, if you have this inner knowledge, then nobody can turn you off... no matter what they say</p>
+							</header>
+							<footer>
+								<a href="#AboutMe" class="button circled scrolly">About me</a>
+							</footer>
+						</div>
 
-.sidebar a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
+					<!-- Top Panel of main website -->
+						<nav id="nav">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li>
+									<a href="#">FindMe On</a>
+									<!--Find me on submenus-->
+									<ul>
+										<li><a href="https://www.linkedin.com/in/deep-patel-330bb0200/">LinkedIn</a></li>
+										<li><a href="https://github.com/kcArtemis">Github</a></li>
+										<li><a href="https://www.instagram.com/_dposy/">Instagram</a></li>
+										<li class="actions special"><a href="/Users/deeppatel/Desktop/Portfolio/html5up-helios/assets/Deep_Patel_Resume_v1.pdf" download="assets/resume.pdf">Resume <i class="icon solid fa-download"></i></a></li>
 
-.sidebar a:hover {
-  color: #f1f1f1;
-}
+									</ul>
+								</li>
+								<li><a href="#project" class="scrolly">Projects</a></li>
+								<li><a href="#footer" class="scrolly">Personal Blogs</a></li>
+								<li><a href="projects/research_blogs.html" class="scrolly">Research Blogs</a></li>
+								
+							</ul>
+						</nav>
 
-.sidebar .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
+				</div>
 
-.openbtn {
-  font-size: 20px;
-  cursor: pointer;
-  background-color: #111;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-}
+			<!-- Banner -->
+				<section id="AboutMe" class="wrapper style1 special">
+					<article id="mai1" class="container special">
+					<header class="major">
+						<h2>I'm a Final year CSE undergraduate at IIT Jodhpur</h2>
+						<p>
+							Lover of pattern finding, constantly seeking new RNA-seq data and methods to analyze vast RNA-seq datasets, inventing novel visualization techniques and tools for representing downstream analysis data derivatives, all while exploring the mysteries of dark genomics.
+						</p>
+					</header>
+					</article>
+				</section>
 
-.openbtn:hover {
-  background-color: #444;
-}
+			<!-- Carousel -->
+				<section class="carousel" id="project">
+					<div class="reel">
 
-#main {
-  transition: margin-left .5s;
-  padding: 16px;
-}
+						<article>
+							<a href="projects/cmap_med.html" class="image featured"><img src="images/CMAP.png" width="100" height="300" alt="" /></a>
+							<header>
+								<h3><a href="projects/cmap_med.html">Connectivity Map analysis of Temporal Transcriptomic Data</a></h3>
+							</header>
+							<p></p>
+						</article>
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
-}
-</style>
-</head>  
-  
-<body>
-  <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+						<article>
+							<a href="#" class="image featured"><img src="images/ORF.png" width="100" height="300" alt="" /></a>
+							<header>
+								<h3><a href="projects/Std_ORF.html">Standarized Annotation of ORF of hg38</a></h3>
+							</header>
+							<p></p>
+						</article>
 
-  <div id="mySidepanel" class="sidepanel">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
-  </div>
-  <div id="3d-graph"></div>
-  <script>
-    // Random tree
-    
-    function openNav() {
-      document.getElementById("mySidepanel").style.width = "250px";
-      document.getElementById("mySidepanel").style.display = "block";
-    }
+						<article>
+							<a href="#" class="image featured"><img src="images/scRNA.png" width="100" height="300" alt="" /></a>
+							<header>
+								<h3><a href="projects/TE_scRNA.html">Transposable element in scRNA data of iPHSC</a></h3>
+							</header>
+							<p></p>
+						</article>
 
-    /* Set the width of the sidebar to 0 (hide it) */
-    function closeNav() {
-      document.getElementById("mySidepanel").style.width = "0";
-      document.getElementById("mySidepanel").style.display = "none";
-    }
-    
-    const N = 3;
-    const gData = {
-     
-    nodes: [
-        {
-          id: "id1",
-          name: "name1",
-          val: 1,
-          fx: 2,
-          fy: 2,
-          fz: 2
-        },
-        {
-          id: "id2",
-          name: "name2",
-          val: 10,
-          fx: 0,
-          fy: 0,
-          fz: 0
-        },
-      {
-          id: "id3",
-          name: "name3",
-          val: 20,
-          fx: 5,
-          fy: 5,
-          fz: 5
-        },
-    ],
-    links: [
-        {
-            source: "id1",
-            target: "id2"
-        },
-      {
-            source: "id2",
-            target: "id3"
-        },
-      {
-            source: "id3",
-            target: "id1"
-        },
-      
-    ]
-    };
+						<article>
+							<a href="#" class="image featured"><img src="images/SoftDev.jpeg" width="100" height="300" alt="" /></a>
+							<header>
+								<h3><a href="#">Bioinformatics Software Developement </a></h3>
+							</header>
+							<p></p>
+						</article>
 
-    // don't display the sidepanel
+							<article>
+							<a href="#" class="image featured"><img src="images/3DNet.jpeg" width="100" height="300" alt="" /></a>
+							<header>
+								<h3><a href="https://github.com/kcArtemis/IISC-Project">3D simulation of differential networks</a></h3>
+							</header>
+					</div>
+				</section>
 
+			<!-- Main -->
+				<div class="wrapper style2">
 
-    const Graph = ForceGraph3D()
-      (document.getElementById('3d-graph'))
-        .graphData(gData)
-        .linkDirectionalArrowLength(3.5)
-        .linkDirectionalArrowRelPos(1)
-        .linkCurvature(0.25)
-        .onNodeDragEnd(node => {
-              node.fx = node.x;
-              node.fy = node.y;
-              node.fz = node.z;
-        })
-        .onNodeClick(node => {
-            if (node.id == "id1") {
-//                 node.fx = 10; // toggle collapse state
-//                 node.fy = 10;
-//                 node.fz = 10;
-//                 #location.href = "https://academic.oup.com/mbe/article/24/11/2385/1014692";
-                openNav();
-                
-        }
-           if (node.id == "id2") {
-//                 node.fx = 50; // toggle collapse state
-//                 node.fy = 50;
-//                 node.fz = 50;
-//                 location.href = "https://github.com/kcArtemis/IISC-Project/blob/main/script.js";
-                openNav();
-        }
-         });
-  </script>
-</body>
+					<article id="main" class="container special">
+						<a href="#" class="image featured"><img src="images/Btech_thesis.png" alt="" width="500" height="450" /></a>
+						<header>
+							<h2><a href="#">Bachelors's Thesis</a></h2>
+							<p>
+								Role of Alu Element bound Transcription Factor in regulating the gene expression by lncRNA.
+							</p>
+						</header>
+						<p>
+							Thesis composed of three different subparts:
+							<!--Create a bullet list-->
+							<ul>
+								<li>Regulation of gene exression by nuclear localized lncRNA</li>
+								<li>Regulation of gene expression by mirRNA sponge</li>
+								<li>Regulation of gene expression by 3D genome regulation (thorugh TAD)</li>
+							</ul>
+						</p>
+						<footer>
+							<a href="projects/Btech_Thesis.html" class="button">Continue Reading</a>
+						</footer>
+					</article>
+
+				</div>
+
+			<!-- Footer -->
+				<div id="footer">
+					<div class="container">
+						<div class="row">
+
+							<!-- Tweets 
+								<section class="col-sm-9">
+									<header>
+										<h2 class="icon brands fa-twitter circled"><span class="label">Tweets</span></h2>
+									</header>
+									<ul class="divided">
+										<li>
+											<article class="tweet">
+												Amet nullam fringilla nibh nulla convallis tique ante sociis accumsan.
+												<span class="timestamp">5 minutes ago</span>
+											</article>
+										</li>
+										<li>
+											<article class="tweet">
+												Hendrerit rutrum quisque.
+												<span class="timestamp">30 minutes ago</span>
+											</article>
+										</li>
+										<li>
+											<article class="tweet">
+												Curabitur donec nulla massa laoreet nibh. Lorem praesent montes.
+												<span class="timestamp">3 hours ago</span>
+											</article>
+										</li>
+										<li>
+											<article class="tweet">
+												Lacus natoque cras rhoncus curae dignissim ultricies. Convallis orci aliquet.
+												<span class="timestamp">5 hours ago</span>
+											</article>
+										</li>
+									</ul>
+								</section> -->
+
+							<!-- Posts -->
+							<div class="row">
+								<article class="col-4 col-12-mobile special">
+									<a href="Blogs/GanaptiVisarjan2023.html" class="image featured"><img src="images/ganpatiVisarjan_portfolio.png" width="100" height="500" alt="" /></a>
+									<header>
+										<h3><a href="Blogs/GanaptiVisarjan2023.html">Ganpati Visarjan</a></h3>
+									</header>
+									<p>
+										The day which I never wanted. 10 days spent with Ganpati, created a festive environment in my house but finally the day have came where he have to leave us. Nevertheles, he will come again next year.
+									</p>
+								</article>
+								<article class="col-4 col-12-mobile special">
+									<a href="Blogs/Mumbailocal_2k23.html" class="image featured"><img src="images/mumbaiLocal_portfolio.png" width="100" height="500" alt="" /></a>
+									<header>
+										<h3><a href="Blogs/Mumbailocal_2k23.html">Mumbai local</a></h3>
+									</header>
+									<p>
+										I was amazed when I noticed a peculiar thing. I can see different type of gender, religion and use of technology.
+									</p>
+								</article>
+								<article class="col-4 col-12-mobile special">
+									<a href="Blogs/Singapore_2k23.html" class="image featured"><img src="images/singapore_portfolio.png" width="100" height="500" alt="" /></a>
+									<header>
+										<h3><a href="Blogs/Singapore_2k23.html">Singapore</a></h3>
+									</header>
+									<p>
+										My very first country to visit. OMG! it was so futuristic and lots of people from different country. I was amazed by the way they have developed their country.Besides this, I noticed that they have three main langauges: English, Chinese and Tamil.
+									</p>
+								</article>
+								<article class="col-4 col-12-mobile special">
+									<a href="Blogs/Vancouver_2k23.html" class="image featured"><img src="images/Vancouver_portfolio.png" width="100" height="500" alt="" /></a>
+									<header>
+										<h3><a href="Blogs/Vancouver_2k23.html">Vancouver</a></h3>
+									</header>
+									<p>
+										When I landed in Vancouver, I was astonished by the fact that from everywhere I see was the mountains. They was magnificient, I almost hiked every mountains there & the hardest was Grouse Grind. I was so tired that I slept for 12 hours straight.Beside the intense grind, there was fear of Grizzly bear. I was so scared that I was constantly looking for bear.
+									</p>
+								</article>
+								
+							</div>
+								
+								<!--section class="col-sm-9">
+									<header>
+										<h2 class="icon solid fa-file circled"><span class="label">Posts</span></h2>
+									</header>
+									<ul class="divided">
+										<li>
+											<article class="post stub">
+												<header>
+													<h3><a href="#">Today was as good as before but ..........................................</a></h3>
+												</header>
+												<span class="timestamp">3 hours ago</span>
+											</article>
+										</li>
+										<li>
+											<article class="post stub">
+												<header>
+													<h3><a href="#">Phasellus portitor lorem</a></h3>
+												</header>
+												<span class="timestamp">6 hours ago</span>
+											</article>
+										</li>
+										<li>
+											<article class="post stub">
+												<header>
+													<h3><a href="#">Magna tempus consequat</a></h3>
+												</header>
+												<span class="timestamp">Yesterday</span>
+											</article>
+										</li>
+										<li>
+											<article class="post stub">
+												<header>
+													<h3><a href="#">Feugiat lorem ipsum</a></h3>
+												</header>
+												<span class="timestamp">2 days ago</span>
+											</article>
+										</li>
+									</ul>
+								</section>-->
+								
+							<!-- Photos -->
+								<!-- <section class="col-4 col-12-mobile">
+									<header>
+										<h2 class="icon solid fa-camera circled"><span class="label">Photos</span></h2>
+									</header>
+									<div class="row gtr-25">
+										<div class="col-6">
+											<a href="#" class="image fit"><img src="images/pic10.jpg" alt="" /></a>
+										</div>
+										<div class="col-6">
+											<a href="#" class="image fit"><img src="images/pic11.jpg" alt="" /></a>
+										</div>
+										<div class="col-6">
+											<a href="#" class="image fit"><img src="images/pic12.jpg" alt="" /></a>
+										</div>
+										<div class="col-6">
+											<a href="#" class="image fit"><img src="images/pic13.jpg" alt="" /></a>
+										</div>
+										<div class="col-6">
+											<a href="#" class="image fit"><img src="images/pic14.jpg" alt="" /></a>
+										</div>
+										<div class="col-6">
+											<a href="#" class="image fit"><img src="images/pic15.jpg" alt="" /></a>
+										</div>
+									</div>
+								</section> -->
+
+						</div>
+						<hr />
+						<div class="row">
+							<div class="col-12">
+
+								<!-- Contact -->
+									<section class="contact">
+										<header>
+											<h3>Where you can find me?</h3>
+										</header>
+										<p>Lets catch up while playing Spider Man 2</p>
+										<ul class="icons">
+											<li><a href="https://twitter.com/_dposy" target="_blank" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+											<li><a href="https://www.instagram.com/_dposy/" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+											<li><a href="https://www.instagram.com/_dposy/" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+											<li><a href="https://www.linkedin.com/in/deep-patel-330bb0200/" target="_blank" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
+										</ul>
+									</section>
+
+								<!-- Copyright -->
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
